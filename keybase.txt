@@ -1,0 +1,51 @@
+https://keybase.io/camerondavison
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://camerondavison.com
+  * I am camerondavison (https://keybase.io/camerondavison) on keybase.
+  * I have a public key ASDNZR4_aGobul0HK8ym3lHtLTmgnOn4Noj7Xq1VivtBwQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01013efb592b221d9cbd7d0f6e006c5cba470615b2c90a77d97488099de11e2e09060a",
+      "host": "keybase.io",
+      "kid": "0120cd651e3f686a1bba5d072bcca6de51ed2d39a09ce9f83688fb5ead558afb41c10a",
+      "uid": "2b7e8a1d5117afcad020924af6feda19",
+      "username": "camerondavison"
+    },
+    "service": {
+      "hostname": "camerondavison.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.18"
+  },
+  "ctime": 1523916218,
+  "expire_in": 504576000,
+  "merkle_root": {
+    "ctime": 1523916205,
+    "hash": "f0f7aaf0d3cfcc3052fa142ed5d035c60ce2db865508e9971e5197b376c1d4961e3129ad03b4ebb3e24b60f595390b72907849f91370186f68528f9ba0029542",
+    "seqno": 2399060
+  },
+  "prev": "d77949ab3fcdead5a476b62e45936ba9c1e19e9e0b424a489dcee29567728df5",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgzWUeP2hqG7pdByvMpt5R7S05oJzp+DaI+16tVYr7QcEKp3BheWxvYWTFAwF7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxM2VmYjU5MmIyMjFkOWNiZDdkMGY2ZTAwNmM1Y2JhNDcwNjE1YjJjOTBhNzdkOTc0ODgwOTlkZTExZTJlMDkwNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwY2Q2NTFlM2Y2ODZhMWJiYTVkMDcyYmNjYTZkZTUxZWQyZDM5YTA5Y2U5ZjgzNjg4ZmI1ZWFkNTU4YWZiNDFjMTBhIiwidWlkIjoiMmI3ZThhMWQ1MTE3YWZjYWQwMjA5MjRhZjZmZWRhMTkiLCJ1c2VybmFtZSI6ImNhbWVyb25kYXZpc29uIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJjYW1lcm9uZGF2aXNvbi5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xOCJ9LCJjdGltZSI6MTUyMzkxNjIxOCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTIzOTE2MjA1LCJoYXNoIjoiZjBmN2FhZjBkM2NmY2MzMDUyZmExNDJlZDVkMDM1YzYwY2UyZGI4NjU1MDhlOTk3MWU1MTk3YjM3NmMxZDQ5NjFlMzEyOWFkMDNiNGViYjNlMjRiNjBmNTk1MzkwYjcyOTA3ODQ5ZjkxMzcwMTg2ZjY4NTI4ZjliYTAwMjk1NDIiLCJzZXFubyI6MjM5OTA2MH0sInByZXYiOiJkNzc5NDlhYjNmY2RlYWQ1YTQ3NmI2MmU0NTkzNmJhOWMxZTE5ZTllMGI0MjRhNDg5ZGNlZTI5NTY3NzI4ZGY1Iiwic2Vxbm8iOjgsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAFXDBAndQsNv7YF/uSUxRfHS8Eyf9MXIuqyOYEMvGphWerzdJ4mv0AtfvG2sgKXJcQL7xCXCpcU/VxCkdA4OWBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJuuP9ezLEPjBBgqk0CtNA8daaeUATMRRlZX0rxv9mRfo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/camerondavison
