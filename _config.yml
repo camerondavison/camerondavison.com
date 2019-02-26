@@ -1,4 +1,6 @@
 theme: jekyll-theme-minimal
 
 title: Cameron Davison
-description: Website for Cameron Davison
+description: Random notes and Thoughts
+
+permalink: /:title/
