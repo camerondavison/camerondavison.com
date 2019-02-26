@@ -3,4 +3,4 @@ theme: jekyll-theme-minimal
 title: Cameron Davison
 description: Random notes and Thoughts
 
-#permalink: /:title/
+permalink: /:title/
