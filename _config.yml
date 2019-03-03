@@ -4,3 +4,7 @@ title: Cameron Davison
 description: Random Notes and Thoughts
 
 permalink: /:year-:month-:day-:title/
+
+collections:
+  drafts:
+    output: true
