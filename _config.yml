@@ -5,6 +5,7 @@ description: Random Notes and Thoughts
 
 permalink: /:year-:month-:day-:title/
 
-#collections:
-#  drafts:
-#    output: true
+# adds /drafts/:title/ pages
+collections:
+  drafts:
+    output: true
