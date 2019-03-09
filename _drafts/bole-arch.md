@@ -14,11 +14,11 @@ Bole is "the trunk of a tree" so it seemed like a good abstract name for somethi
 Recently I read about [withoutboats](https://github.com/withoutboats) [having a similar](https://boats.gitlab.io/blog/post/names-and-scuba/) if not that same philisophy.
 
 ### History
-I have read/used over the years a variety of logs. I think that it can be good to talk about the history of logging to get a setup what the goals will be. Trying to go in order from simplest to most complex.
+I have read/used over the years a variety of logs. I think that it can be good to talk about the history of logging to get a idea what the goals should be. Trying to go in order from simplest to most complex.
 
 - single file growing forever
   - when it gets too big what do you do?
-- roll log ever N bytes
+- roll log every N bytes
   - will roll in the middle of newline
   - many logs will fill up the disks
 - write to syslog locally
@@ -31,6 +31,6 @@ I have read/used over the years a variety of logs. I think that it can be good t
   - IMHO the same solution as SaaS offerings
 - write locally with rolling but fixed number of rolled files
   - can still roll in middle of newlines (which could be fixed)
-  - requires the logs be sent somewhere since they can disappear in high volume
+  - requires the logs be sent somewhere quickly since they can disappear in high volume
      - requires you to setup something like [filebeat](https://github.com/elastic/beats/tree/master/filebeat) to ship them off somewhere
      
