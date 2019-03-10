@@ -132,3 +132,16 @@ for log entries. As long as we assign these ID's as quickly as possible locally,
 before transmition, we will more likely have the correct timestamp for the logs. We
 could optimize something in the future to read the timestamps from journald or configure
 where the timestamp is in the log if that does not give us the correct timestamps.
+
+We desire to get the logs off of the machine as quickly as possible, but also the machine
+is a very convinient place to keep the logs for buffering. In the event that we cannot
+push the logs anywhere we keep assigning IDs but but keep track of where we are in transmitting 
+seperately. Also we should keep track of another cursor which will be acknowldegement from the
+`archiver` that the logs of been persisted and replicated. Ideally the `collector` will not
+delete any logs until it gets this `ack` (but we may not be in controll of that). Once we
+get an `ack` from the `archiver` we are allowed to stop tracking the log line to ID tuple, but we do 
+want to keep track of the fact that the line was fully processed. On restart always send
+every line that is older than the latest `ack` again, which should be okay since the event will be
+deduplicated based on the ID.
+
+#### Archiver
