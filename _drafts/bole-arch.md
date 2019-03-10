@@ -97,7 +97,8 @@ Trying to go in order from simplest to most complex.
 
 #### Collector
 
-This runs on every server. It could be a sidecar if you want, but likely needs to just be configured once for each machine.
+This runs on every server. It could be a sidecar if you want, but likely needs to just 
+be configured once for each machine.
 It can be configured for each type of logs that needs to be collected. 
 
 * files
@@ -119,3 +120,9 @@ what assigned to which line. Also it will need to keep track of file renames. We
 do not want to send the same events again for a file rename, which will likey happen
 in the event of a log roll. We do not want to have to wait for the roll to happen
 since this will put arbitrary lag on the events that come in.
+
+The local collector should assign a unique ID to a given line in a given file.
+Only after the ID has been created and persited will the line be transmitted off of
+the local machine. This way we can transmit with retries but only have 1 ID per line,
+even across restarts of the machine. This same technique can be used for the journald
+system, just using the [__CURSOR](https://www.freedesktop.org/software/systemd/man/systemd.journal-fields.html#__CURSOR=)
