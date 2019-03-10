@@ -125,4 +125,10 @@ The local collector should assign a unique ID to a given line in a given file.
 Only after the ID has been created and persited will the line be transmitted off of
 the local machine. This way we can transmit with retries but only have 1 ID per line,
 even across restarts of the machine. This same technique can be used for the journald
-system, just using the [__CURSOR](https://www.freedesktop.org/software/systemd/man/systemd.journal-fields.html#__CURSOR=)
+system, just using the [`__CURSOR`](https://www.freedesktop.org/software/systemd/man/systemd.journal-fields.html#__CURSOR=).
+Bole uses [monotonic ulid](https://github.com/ulid/spec#monotonicity) since they are unique, 
+easy to pass around in url params, and also lexigraphically sortable. All great properties
+for log entries. As long as we assign these ID's as quickly as possible locally, even
+before transmition, we will more likely have the correct timestamp for the logs. We
+could optimize something in the future to read the timestamps from journald or configure
+where the timestamp is in the log if that does not give us the correct timestamps.
