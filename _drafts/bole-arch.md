@@ -95,7 +95,7 @@ Trying to go in order from simplest to most complex.
 
 ### Bole Architecture
 
-#### Collector
+#### Bark (outermost part of the trunk)
 
 This runs on every server. It could be a sidecar if you want, but likely needs to just 
 be configured once for each machine.
@@ -121,7 +121,7 @@ do not want to send the same events again for a file rename, which will likey ha
 in the event of a log roll. We do not want to have to wait for the roll to happen
 since this will put arbitrary lag on the events that come in.
 
-The local collector should assign a unique ID to a given line in a given file.
+The local `bark` should assign a unique ID to a given line in a given file.
 Only after the ID has been created and persited will the line be transmitted off of
 the local machine. This way we can transmit with retries but only have 1 ID per line,
 even across restarts of the machine. This same technique can be used for the journald
@@ -137,11 +137,16 @@ We desire to get the logs off of the machine as quickly as possible, but also th
 is a very convinient place to keep the logs for buffering. In the event that we cannot
 push the logs anywhere we keep assigning IDs but but keep track of where we are in transmitting 
 seperately. Also we should keep track of another cursor which will be acknowldegement from the
-`archiver` that the logs of been persisted and replicated. Ideally the `collector` will not
+`archiver` that the logs of been persisted and replicated. Ideally the `bark` will not
 delete any logs until it gets this `ack` (but we may not be in controll of that). Once we
 get an `ack` from the `archiver` we are allowed to stop tracking the log line to ID tuple, but we do 
 want to keep track of the fact that the line was fully processed. On restart always send
 every line that is older than the latest `ack` again, which should be okay since the event will be
 deduplicated based on the ID.
 
-#### Archiver
+#### Ring
+
+The first task of the `ring` is to get events from the `bark`s bundle them up into
+`segment`s. These should be time base and size based, they should be compressed (since 
+logs usually compress really well), and then deduplicated.
+The output is a bunch of `segment`s that will be replicated, and consumed by searches.
