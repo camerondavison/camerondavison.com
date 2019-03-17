@@ -137,9 +137,9 @@ We desire to get the logs off of the machine as quickly as possible, but also th
 is a very convinient place to keep the logs for buffering. In the event that we cannot
 push the logs anywhere we keep assigning IDs but but keep track of where we are in transmitting 
 seperately. Also we should keep track of another cursor which will be acknowldegement from the
-`archiver` that the logs of been persisted and replicated. Ideally the `bark` will not
+`ring`s that the logs of been persisted and replicated. Ideally the `bark` will not
 delete any logs until it gets this `ack` (but we may not be in controll of that). Once we
-get an `ack` from the `archiver` we are allowed to stop tracking the log line to ID tuple, but we do 
+get an `ack` from the `ring`s we are allowed to stop tracking the log line to ID tuple, but we do 
 want to keep track of the fact that the line was fully processed. On restart always send
 every line that is older than the latest `ack` again, which should be okay since the event will be
 deduplicated based on the ID.
