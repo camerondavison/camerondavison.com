@@ -150,3 +150,15 @@ The first task of the `ring` is to get events from the `bark`s bundle them up in
 `segment`s. These should be time base and size based, they should be compressed (since 
 logs usually compress really well), and then deduplicated.
 The output is a bunch of `segment`s that will be replicated, and consumed by searches.
+
+In order to do replication the `ring` nodes will need to keep a memberlist of all the
+currently known nodes. This can be kept through gossip, maybe something similar to
+[memberlist](https://github.com/hashicorp/memberlist).
+
+Queries are run against every node in the system, the originator of the query knows all
+of the other nodes in the `ring` since it is itself part of the gossip pool. 
+We are deliberatly sending to every node so that we do not have to cooridinate whoe
+is the owner of the node. This costs a little more but is unexpected
+to be a bottle neck. The `ring` nodes should be considerably less than the `bark` nodes.
+The results of the queries are then k-way merged and deduplicated the the client that originated
+the request.
