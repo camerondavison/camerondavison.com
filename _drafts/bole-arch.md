@@ -160,5 +160,5 @@ of the other nodes in the `ring` since it is itself part of the gossip pool.
 We are deliberatly sending to every node so that we do not have to coordinate who
 is the owner of the node. This costs a little more but is unexpected
 to be a bottle neck. The `ring` nodes should be considerably less than the `bark` nodes.
-The results of the queries are then k-way merged and deduplicated the the client that originated
+The results of the queries are then k-way merged and deduplicated by the client that originated
 the request.
