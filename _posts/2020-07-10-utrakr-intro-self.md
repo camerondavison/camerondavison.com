@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Writing Utrakr"
+tags: utrakr,intro
+author: camerondavison
+---
+
 Introduction to my self, Cameron Davison, and a first series on 
 writing utrakr.app url shortener.
 
