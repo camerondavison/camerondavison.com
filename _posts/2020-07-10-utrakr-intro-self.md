@@ -6,7 +6,7 @@ author: camerondavison
 ---
 
 Introduction: My name is Cameron Davison and this is a series on 
-writing the https://utrakr.app url shortener.
+writing the [utrakr.app](https://utrakr.app) url shortener.
 
 ## Introduction
 I thought that it would be a good idea to start a series on writing a production quality app from beginning to end.

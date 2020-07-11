@@ -1,11 +1,64 @@
-theme: jekyll-theme-minimal
+plugins:
+  - jekyll-remote-theme
+remote_theme: daviddarnes/alembic
 
-title: Cameron Davison
-description: Random Notes and Thoughts
+exclude:
+  - README.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+  - .bundle
 
-permalink: /:year-:month-:day-:title/
+paginate: 2
+paginate_path: blog/page:num
+author: camerondavison
+social:
+  name: Cameron Davison
+  links:
+    - https://www.linkedin.com/in/camerondavison
+    - https://github.com/daviddarnes
 
-# adds /drafts/:title/ pages
+sass:
+  style: compressed
+permalink: pretty
+excerpt_separator: <!-- more -->
+timezone: America/Chicago
+
 collections:
-  drafts:
+  posts:
+    title: Cameron Davison
     output: true
+    description: "Random Notes and Thoughts"
+    feature_image: "/img/unicycle.jpg"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/default-social-image.png"
+
+encoding: utf-8
+lang: en-US
+title: "Cameron Davison" # Site name or title, also used in jekyll-seo-tag
+description: "Random Notes and Thoughts"
+url: "https://camerondavison.com"
+baseurl: ""
+repo: "https://github.com/camerondavison/camerondavison.com"
+email: "cameron.davison@gmail.com"
+# google_analytics: ''
+css_inline: true
+
+navigation_header:
+  - title: Home
+    url: /
+
+navigation_footer:
+  - title: Created by Cameron Davison
+    url: https://camerondavison.com
+
+social_links:
+  LinkedIn: https://www.linkedin.com/in/camerondavison
+  GitHub: https://github.com/camerondavison
+  RSS: /feed.xml
