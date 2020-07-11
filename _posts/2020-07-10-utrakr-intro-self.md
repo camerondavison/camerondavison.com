@@ -1,4 +1,5 @@
-# Writing μtrakr
+Introduction to my self, Cameron Davison, and a first series on 
+writing utrakr.app url shortener.
 
 ## Introduction
 I thought that it would be a good idea to start a series on writing a porduction qualtiy app from beinging to end.
