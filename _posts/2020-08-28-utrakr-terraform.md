@@ -3,6 +3,7 @@ layout: post
 title:  "Building μtrakr - GCP"
 tags: utrakr,terraform,gcp
 author: camerondavison
+comments: true
 ---
 
 Continuing the series of writing 

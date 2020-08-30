@@ -3,6 +3,7 @@ layout: post
 title:  "Building μtrakr - Intro"
 tags: utrakr,intro
 author: camerondavison
+comments: true
 ---
 
 Introduction: My name is Cameron Davison and this is a series on 

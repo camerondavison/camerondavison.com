@@ -48,6 +48,7 @@ baseurl: ""
 repo: "https://github.com/camerondavison/camerondavison.com"
 email: "cameron.davison@gmail.com"
 # google_analytics: ''
+disqus: "camerondavison"
 css_inline: true
 
 navigation_header:
