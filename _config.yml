@@ -47,7 +47,7 @@ url: "https://camerondavison.com"
 baseurl: ""
 repo: "https://github.com/camerondavison/camerondavison.com"
 email: "cameron.davison@gmail.com"
-# google_analytics: ''
+google_analytics: "UA-176821237-1"
 disqus: "camerondavison"
 css_inline: true
 
