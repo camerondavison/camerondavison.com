@@ -38,7 +38,7 @@ that you are making. [Git](https://git-scm.com/) or any version control system (
 going to help with this. In the same way that using a VCS is critical to writing
 software systems, it is also critical to managing software systems. 
 
-## VCS for infrastructure is good by why Terraform?
+## VCS for infrastructure is good but why Terraform?
 
 Terraform is unique to other platforms such as [saltstack](https://www.saltstack.com/) and
 [ansible](https://www.ansible.com/) because of it use of a state file. The state file is
