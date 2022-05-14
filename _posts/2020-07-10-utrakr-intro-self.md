@@ -12,7 +12,7 @@ writing the [utrakr.app](https://utrakr.app) url shortener.
 ## Introduction
 I thought that it would be a good idea to start a series on writing a production quality app from beginning to end.
 I am an engineer at [Digital Pharmacist](https://www.digitalpharmacist.com/) and I am passionate about writing production
-software system using the [unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) "Make each program do one thing well" 
+software systems using the [unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) "Make each program do one thing well" 
 that you can compose into a larger software system to build a business. This philosophy also tends to lead to a service oriented
 architecture and solving lots of distributed system problems. I like "distributed systems" and think that running all the
 software at a company is the largest distributed system there is. This puts me into leadership positions deploying code,
