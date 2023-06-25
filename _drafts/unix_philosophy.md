@@ -15,10 +15,19 @@ comments: true
 ## POSIX arguments 
 
 ## XSV as an example 
-https://github.com/BurntSushi/xsv
 
-- - should it require the file to be named .csv to be comma delim? Or can I choose it through a command line art? 
-- - sample and flatten work together.
+SQL Database's are aa great way to save relational data, I also think that storing data in csv files is an easy way to make data available to people. 
+CSV's are also easy to store in git because they are text. This aligns well with the idea of text being a universal interface. One of my favorite tools
+to disect CSV files is [xsv](https://github.com/BurntSushi/xsv).
+
+One way that XSV embraces this philospohy is the way that it handles stats. The output of the stats command is another CSV. You can pipe it through
+to the next step and it just assumes that it is some csv. 
+
+```
+xsv stats data.csv | xsv sample 2 | xsv table
+```
+This data as an input, generates a stats csv output, and then sample 2 rows out of that table. The last step turns it into a table, which pretty prints the
+data by putting spaces around the values to make them line up.
 
 ## CRUD Application as an example
 
